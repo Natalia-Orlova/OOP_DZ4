@@ -6,6 +6,6 @@ public class BeginWith implements IsGood<String> {
 
     @Override
     public boolean isGood(String item) {
-        return false;
+        return item.startsWith("надо додумать");
     }
 }

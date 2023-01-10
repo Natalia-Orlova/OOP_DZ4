@@ -21,6 +21,7 @@ boolean isGood (T item);
 import lesson4.Interface.IsGood;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -36,7 +37,15 @@ public class Main {
         System.out.println("Четные элементы: " + filter(numArr, new IsEven()));
         System.out.println("Положительные элементы: " + filter(numArr, new IsPositive()));
 
+        List<String> stringList = new ArrayList<>();
+        stringList.add("Дорога длинная");
+        stringList.add("Горячий кофе");
+        stringList.add("Заправка");
+        stringList.add("Арбузы на дороге");
 
+        System.out.println("Исходная коллекция: " + stringList);
+        System.out.println("Строки, начинающиеся на \"А\": " + filter(stringList, new BeginWithA()));
+        System.out.println(filter(stringList, new BeginWith()));
     }
 
     public static <T> Collection<T> filter (Iterable<T> array, IsGood<T> isGood) {
