@@ -28,6 +28,7 @@ public class Main {
     public static void main(String[] args) {
         List<Integer> numArr = new ArrayList<>();
         numArr.add(-15);
+        numArr.add(81);
         numArr.add(50);
         numArr.add(456);
         numArr.add(-36);
@@ -36,13 +37,11 @@ public class Main {
         System.out.println("Четные элементы: " + filter(numArr, new IsEven()));
         System.out.println("Положительные элементы: " + filter(numArr, new IsPositive()) + "\n");
 
-
         List<String> stringList = new ArrayList<>();
         stringList.add("Ко мне приплывала зеленая рыба");
         stringList.add("Ко мне прилетела белая чайка");
         stringList.add("А я была дерзкой, злой и веселой");
         stringList.add("И вовсе не знала, что это - счастье.\n");
-
 
         System.out.println("Исходная коллекция: ".toUpperCase());
         for (String string : stringList) {
