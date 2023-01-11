@@ -8,5 +8,4 @@ public class IsPositive implements IsGood<Integer> {
     public boolean isGood(Integer item) {
         return item > 0;
     }
-
 }

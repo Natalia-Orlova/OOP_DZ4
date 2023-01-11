@@ -21,7 +21,6 @@ boolean isGood (T item);
 import lesson4.Interface.IsGood;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -33,19 +32,25 @@ public class Main {
         numArr.add(456);
         numArr.add(-36);
 
-        System.out.println("Исходная коллекция: " + numArr);
+        System.out.println("Исходная коллекция: ".toUpperCase() + numArr);
         System.out.println("Четные элементы: " + filter(numArr, new IsEven()));
-        System.out.println("Положительные элементы: " + filter(numArr, new IsPositive()));
+        System.out.println("Положительные элементы: " + filter(numArr, new IsPositive()) + "\n");
+
 
         List<String> stringList = new ArrayList<>();
-        stringList.add("Дорога длинная");
-        stringList.add("Горячий кофе");
-        stringList.add("Заправка");
-        stringList.add("Арбузы на дороге");
+        stringList.add("Ко мне приплывала зеленая рыба");
+        stringList.add("Ко мне прилетела белая чайка");
+        stringList.add("А я была дерзкой, злой и веселой");
+        stringList.add("И вовсе не знала, что это - счастье.\n");
 
-        System.out.println("Исходная коллекция: " + stringList);
+
+        System.out.println("Исходная коллекция: ".toUpperCase());
+        for (String string : stringList) {
+            System.out.println(string);
+        }
         System.out.println("Строки, начинающиеся на \"А\": " + filter(stringList, new BeginWithA()));
-        System.out.println(filter(stringList, new BeginWith()));
+        System.out.println("Строки, начинающиеся c \"Ко мне\": " +
+                filter(stringList, new BeginWith("Ко мне")));
     }
 
     public static <T> Collection<T> filter (Iterable<T> array, IsGood<T> isGood) {

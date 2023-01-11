@@ -8,5 +8,4 @@ public class IsEven implements IsGood<Integer> {
     public boolean isGood(Integer item) {
         return item % 2 == 0;
     }
-
 }
